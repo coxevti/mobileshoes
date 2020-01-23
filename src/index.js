@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+import './config/ReactotronConfig';
+
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
@@ -11,6 +13,8 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
 });
+
+console.tron.log('Hello shoes');
 
 export default function App() {
   return (
