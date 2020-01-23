@@ -1,25 +1,19 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {StatusBar} from 'react-native';
 
+import 'react-native-gesture-handler';
 import './config/ReactotronConfig';
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  Text: {
-    fontSize: 25,
-  },
-});
-
-console.tron.log('Hello shoes');
+import Routes from './routes';
+import colors from './styles/colors';
+import NavigationService from './services/navigation';
 
 export default function App() {
   return (
-    <View style={styles.Container}>
-      <Text style={styles.Text}>MobileShoes</Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
+      <Routes
+        ref={navigatorRef => NavigationService.setNavigator(navigatorRef)}
+      />
+    </>
   );
 }
