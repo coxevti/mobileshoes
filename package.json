@@ -8,11 +8,13 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "api": "json-server server.json -p 3001"
+    "api": "json-server server.json -p 3001 -H 192.168.10.23"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",
     "axios": "^0.19.2",
+    "immer": "^5.3.2",
+    "intl": "^1.2.5",
     "polished": "^3.4.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
@@ -23,7 +25,12 @@
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^2.0.16",
+    "react-redux": "^7.1.3",
     "reactotron-react-native": "^4.0.3",
+    "reactotron-redux": "^3.1.2",
+    "reactotron-redux-saga": "^4.2.3",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {

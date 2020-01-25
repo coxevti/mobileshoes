@@ -1,20 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Wrapper, Container, Logo, BasketContainer, ItemCount} from './styles';
 
-function Header() {
+function Header({navigation, cartSize}) {
+  console.tron.log(navigation);
   return (
     <Wrapper>
       <Container>
-        <Logo />
-        <BasketContainer>
+        <Logo onPress={() => navigation.navigate('Cart')} />
+        <BasketContainer onPress={() => navigation.navigate('Cart')}>
           <Icon name="shopping-basket" color="#fff" size={24} />
-          <ItemCount>20</ItemCount>
+          <ItemCount>{cartSize || 0}</ItemCount>
         </BasketContainer>
       </Container>
     </Wrapper>
   );
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  cartSize: state.cart.length,
+});
+
+export default connect(mapStateToProps, null)(Header);
