@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "api": "json-server server.json -p 3001 -H 192.168.10.23"
+    "api": "json-server server.json -p 3001 -H 192.168.2.5"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",
